@@ -48,6 +48,7 @@ export interface ImageStyle extends FlexStyle, TransformsStyle, ShadowStyleIOS {
     overlayColor?: string
     tintColor?: string
     opacity?: number
+    blurRadius?: number
 }
 
 export interface OnLoadEvent {
