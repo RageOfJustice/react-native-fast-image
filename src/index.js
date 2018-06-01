@@ -48,6 +48,7 @@ class FastImage extends Component {
             onLoadEnd,
             style,
             children,
+            blurRadius,
             ...props
         } = this.props
 
@@ -64,6 +65,7 @@ class FastImage extends Component {
                     onLoad={onLoad}
                     onError={onError}
                     onLoadEnd={onLoadEnd}
+                    blurRadius={blurRadius}
                 />
             )
         }
@@ -81,6 +83,7 @@ class FastImage extends Component {
                     onFastImageLoad={onLoad}
                     onFastImageError={onError}
                     onFastImageLoadEnd={onLoadEnd}
+                    blurRadius={blurRadius}
                 />
                 {children && (
                     <View style={StyleSheet.absoluteFill}>{children}</View>
@@ -131,6 +134,7 @@ FastImage.propTypes = {
     onLoad: PropTypes.func,
     onError: PropTypes.func,
     onLoadEnd: PropTypes.func,
+    blurRadius: PropTypes.number
 }
 
 const FastImageView = requireNativeComponent('FastImageView', FastImage, {
